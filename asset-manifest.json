@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a70d71cc.css",
+    "main.js": "/static/js/main.6153a4a9.js",
+    "static/media/man.png": "/static/media/man.9f50ca3ebed198669f9b.png",
+    "static/media/music.png": "/static/media/music.12ebacccbbad458d0fd6.png",
+    "static/media/Group.png": "/static/media/Group.70f394a3af6be821886a.png",
+    "static/media/nick.png": "/static/media/nick.41a2db626b996d4a3bf0.png",
+    "static/media/man.jpeg": "/static/media/man.12b1248237fb6eee00c1.jpeg",
+    "static/media/comp.png": "/static/media/comp.fc2bd451c50e5c12e539.png",
+    "static/media/weather.png": "/static/media/weather.66d10ab5d34c30602fff.png",
+    "static/media/todoapp.png": "/static/media/todoapp.7e880707e6bf1ab0d40a.png",
+    "static/media/calculator.png": "/static/media/calculator.ab9fb82b6cd63a25e6aa.png",
+    "static/media/samuel.pdf": "/static/media/samuel.194a74809c6cee46aea4.pdf",
+    "index.html": "/index.html",
+    "main.a70d71cc.css.map": "/static/css/main.a70d71cc.css.map",
+    "main.6153a4a9.js.map": "/static/js/main.6153a4a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a70d71cc.css",
+    "static/js/main.6153a4a9.js"
+  ]
+}
