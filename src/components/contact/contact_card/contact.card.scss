@@ -1,0 +1,31 @@
+.cards{
+  background-color: #FFFFFF;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 1px 1px 5px #6d6c6c48;
+  display: flex;
+  row-gap: 1em;
+  flex-direction: column;
+  align-items: center;
+  &.dark{
+    background-color: transparent;
+  }
+  .mails{
+    color: #1DAEFF;
+    font-size: 1.3rem;
+  }
+  a{
+    text-decoration: none;
+    color: #1DAEFF;
+  }
+  h3, h5{
+    color: #6D7579;
+  }
+  h3{
+    font-size: 1.3rem;
+  }
+  h5{
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}

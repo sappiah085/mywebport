@@ -1,0 +1,91 @@
+.set {
+  display: flex;
+  row-gap: 0.2em;
+  flex-direction: column;
+  .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      color: #0697ff;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    h6 {
+      font-weight: 500;
+      color: #1e1e1e;
+      font-size: 1.4rem;
+      &.dark{
+        color: #ffff;
+      }
+    }
+  }
+  .eff {
+    height: 1em;
+    position: relative;
+    // background-color: #0697ff;
+    background-color: #d9d9d9;
+    border-radius: 12px;
+    width: 100%;
+    overflow: hidden;
+    &.dark{
+      background-color: #333333;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0%;
+      top: 0%;
+      width: 98%;
+      height: 100%;
+      background-color: #0697ff;
+    }
+  }
+  .css {
+    &::after {
+      width: 95%;
+    }
+  }
+  .react {
+    &::after {
+      width: 83%;
+    }
+  }
+  .scss {
+    &::after {
+      width: 92%;
+    }
+  }
+  .javascript {
+    &::after {
+      width: 85%;
+    }
+  }
+  .nodejs {
+    &::after {
+      width: 75%;
+    }
+  }
+  .python {
+    &::after {
+      width: 68%;
+    }
+  }
+  .mongodb {
+    &::after {
+      width: 73%;
+    }
+  }
+  .fast {
+    &::after {
+      width: 62%;
+    }
+  }
+  .rest {
+    &::after {
+      width: 75%;
+    }
+  }
+  
+}

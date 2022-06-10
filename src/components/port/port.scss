@@ -1,0 +1,39 @@
+.port {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 5em 0;
+  row-gap: 2em;
+  &.dark{
+    background-color: #0D0D0D;
+  }
+  h1 {
+    font-size: 3rem;
+    color: #008beb;
+  }
+  .container {
+    width: 100%;
+    // background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 2em;
+    column-gap: 3em;
+  }
+  .swiper {
+    max-width: 1100px;
+    padding: 1em;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .swiper-slide {
+    // background-color: aquamarine;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+  }
+}

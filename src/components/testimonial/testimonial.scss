@@ -1,0 +1,39 @@
+.test {
+  background-color: #f2f4f5;
+  width: 100%;
+  display: flex;
+  padding: 5em 0;
+  flex-direction: column;
+  align-items: center;
+  &.dark {
+    background-color: #181818;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #008beb;
+  }
+  .card {
+    display: flex;
+    width: 100%;
+    column-gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 2em;
+    padding: 2em 1em;
+    overflow: hidden;
+  }
+  .swiper {
+    max-width: 540px;
+    padding: 1em;
+    width: 100%;
+    height: fit-content;
+  }
+
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+  }
+}

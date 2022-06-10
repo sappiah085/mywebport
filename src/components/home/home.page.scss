@@ -1,0 +1,156 @@
+@mixin greater_than_1100px {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
+@mixin less_than_685px {
+  @media (max-width: 685px) {
+    @content;
+  }
+}
+
+.homepage {
+  $homepage_bg: #f2f4f5e8;
+  $white: #ffffff;
+  $font_color: #475056;
+  $name_color: #008beb;
+  background-color: $homepage_bg;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.7em;
+  flex-wrap: wrap-reverse;
+  padding: 5em 5em;
+  @include less_than_685px() {
+    padding: 2em 1.5em;
+    flex-wrap: wrap;
+    .main {
+      margin-top: 1em;
+      background: url("../../images/man.png");
+      display: flex;
+      height: 50vh;
+      width: 100%;
+      background-size: 100vh, 100vh, contain;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      &.dark{
+        background-image: url("../../images/Group.png");
+      }
+    }
+  }
+  .bodyText {
+    flex-basis: 34em;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    .hello {
+      font-family: "Clash Display", sans-serif;
+      line-height: 0.6em;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: $font_color;
+    }
+    .name {
+      font-family: "Clash Display", sans-serif;
+      font-size: 4rem;
+      font-weight: 900;
+      color: $name_color;
+    }
+    p {
+      color: $font_color;
+      font-size: 1.3rem;
+      font-family: "Poppins", sans-serif;
+    }
+    .buttons {
+      font-family: "Poppins", sans-serif;
+      margin-top: 1em;
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 0.7em;
+      justify-content: flex-start;
+      align-items: center;
+      column-gap: 2em;
+      a {
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+
+      .downloadlink,
+      .talk {
+        background-color: $name_color;
+        color: $white;
+        font-weight: 500;
+        text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.336);
+        padding: 0.5em 1em;
+        border-radius: 12px;
+        box-shadow: 0.6px 0.5px 20px #0089eb70, -0.8px -0.8px 10px #0089eb1a;
+        &:hover {
+          outline: 1px solid $name_color;
+          box-shadow: none;
+        }
+      }
+      .downloadlink {
+        &.dark {
+          color: #1e1e1e;
+        }
+        &:hover {
+          color: $name_color;
+          background-color: transparent;
+        }
+      }
+      .talk {
+        color: $name_color;
+        background-color: $white;
+        outline: 0.3px solid $name_color;
+        &:hover {
+          background-color: $name_color;
+          color: $white;
+        }
+      }
+    }
+    .socials {
+      margin-top: 2em;
+      font-size: 2rem;
+      display: flex;
+      justify-content: flex-start;
+      align-content: center;
+      column-gap: 0.3em;
+      text-shadow: 1px 1px 60px solid #0089eb8c;
+      a {
+        text-decoration: none;
+        color: $name_color;
+      }
+    }
+  }
+  .illustrator {
+    position: relative;
+    flex-shrink: 1;
+    overflow: hidden;
+    flex-basis: 40em;
+    width: 100%;
+    min-height: 35em;
+    @include less_than_685px() {
+      display: none;
+    }
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      object-fit: contain;
+      transform: translate(-50%, -214px) scale(1.6);
+      max-width: 100%;
+      min-width: 690px;
+      @include greater_than_1100px() {
+        transform: translate(-50%, -214px) scale(1.8);
+        &.dark{
+          transform: translate(-50%, -195px) scale(1.7);
+        }
+      }
+    }
+    
+  }
+}

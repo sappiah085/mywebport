@@ -1,0 +1,64 @@
+@mixin greater_than_500px {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+.test_card {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  padding: 1em;
+  row-gap: 1em;
+  background-color: #ffffff;
+  border-radius: 12px;
+  flex-direction: column;
+  @include greater_than_500px() {
+    max-width: 350px;
+  }
+  &:not(.dark) {
+    box-shadow: 1px 1px 5px #0d0d0d17;
+  }
+  &.dark {
+    background-color: #0d0d0d;
+    .label {
+      .names {
+        color: white;
+      }
+      .job {
+        color: #475056;
+      }
+    }
+    p {
+      color: white;
+    }
+  }
+  .label {
+    display: flex;
+    column-gap: 1em;
+    width: 100%;
+    align-items: center;
+    .names {
+      display: flex;
+      color: #475056;
+      font-size: 1.5rem;
+      font-weight: 500;
+      flex-direction: column;
+      row-gap: 0.1em;
+      .job {
+        font-weight: 300;
+        font-size: 1.2rem;
+      }
+    }
+    img {
+      width: 5em;
+      height: 5em;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  p {
+    text-align: center;
+    padding: 1em;
+    color: #475056c4;
+  }
+}

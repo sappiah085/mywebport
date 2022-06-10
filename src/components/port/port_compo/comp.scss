@@ -1,0 +1,42 @@
+@mixin greater_than_500 {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+.port_cart {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  text-decoration: none;
+  color: #475056;
+  border-radius: 12px;
+  padding: 1em;
+  row-gap: 1em;
+  box-shadow: 13px 13px 56px #4750561e;
+  background-color: #ffffff;
+  @include greater_than_500() {
+    max-width: 400px;
+  }
+  &.dark {
+    color: white;
+    background-color: #0d0d0d;
+    box-shadow: 1px 1px 10px #4750560e;
+  }
+  h3 {
+    color: #008beb;
+    font-weight: 400;
+  }
+  img {
+    width: 80%;
+    aspect-ratio: 9/4;
+    object-fit: cover;
+    border-radius: 15px;
+    align-self: center;
+  }
+
+}

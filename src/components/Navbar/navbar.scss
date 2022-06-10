@@ -1,0 +1,150 @@
+$font_color: #475056;
+$nav_active_color: #008beb;
+$navbar_bg: #f2f4f5e8;
+@mixin less_than_560 {
+  @media (max-width: 560px) {
+    @content;
+  }
+}
+.progress {
+  width: 0.5em;
+  justify-self: flex-start;
+  top: 0%;
+  background-color: $font_color;
+  position: fixed;
+  border-radius: 12px;
+  z-index: 3;
+}
+nav {
+  display: flex;
+  position: sticky;
+  top: 0%;
+  color: #475056;
+  background-color: #f8fafb;
+  z-index: 3;
+  justify-content: center;
+  width: 100%;
+  &.dark {
+    background-color: #121212;
+    color: #ffffff;
+    @include less_than_560() {
+      .toggle {
+        &::after,
+        &::before {
+          content: "";
+          background-color: #008beb;
+        }
+      }
+    }
+  }
+  @include less_than_560() {
+    flex-direction: column;
+    .toggle {
+      height: 0.25em;
+      width: 2em;
+      position: relative;
+      margin: 2em;
+      background-color: transparent;
+      align-self: flex-end;
+      border-radius: 12px;
+      cursor: pointer;
+      &::after,
+      &::before {
+        content: "";
+        background-color: #475056;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        border-radius: inherit;
+      }
+      &::after {
+        top: -120%;
+        transform: rotate(-45deg) translate(3px, 4px);
+      }
+      &::before {
+        top: 120%;
+        transform: rotate(-45deg) translate(3px, 4px);
+      }
+      &.active {
+        &::after {
+          animation: activetop 0.5s ease-in-out forwards;
+        }
+        &::before {
+          animation: activedown 0.5s ease-in-out forwards;
+        }
+      }
+    }
+    ul {
+      flex-direction: column;
+      align-items: flex-start;
+      transition:height 2s ease-in-out;
+      width: 100%;
+      flex-wrap: nowrap;
+      &.hid {
+        visibility:hidden;
+        height: 0;
+      }
+    }
+  }
+  ul {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1em;
+    column-gap: 1.4em;
+    list-style: none;
+    overflow: hidden;
+    li {
+      font-size: 1.3rem;
+      a {
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+        color: $font_color;
+        &.dark {
+          color: #ffffff;
+        }
+        &:focus,
+        &:focus-visible {
+          color: $nav_active_color;
+          border: none;
+          outline: none;
+        }
+        &[active="active"] {
+          color: #008beb;
+        }
+      }
+    }
+    .moon {
+      cursor: pointer;
+      margin-left: 2em;
+    }
+  }
+}
+@keyframes activetop {
+  0% {
+    top: -120%;
+  }
+  30% {
+    top: -50%;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    transform: rotate(45deg) translate(11px, 4px);
+  }
+}
+@keyframes activedown {
+  0% {
+    top: 120%;
+  }
+  30% {
+    top: 50%;
+  }
+  50% {
+    top: 0%;
+  }
+  100% {
+    transform: rotate(-45deg) translate(3px, 4px);
+  }
+}

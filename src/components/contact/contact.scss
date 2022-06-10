@@ -1,0 +1,138 @@
+@mixin less_than_560 {
+  @media (max-width: 1456px) {
+    @content;
+  }
+}
+.contact {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  padding: 5em 16em;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  row-gap: 1.5em;
+  @include less_than_560() {
+    padding: 5em 1em;
+  }
+  &.dark {
+    background-color: #0d0d0d;
+    label {
+      input {
+        color: white;
+      }
+      textarea {
+        color: white;
+      }
+    }
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #008beb;
+  }
+  h4 {
+    align-self: flex-start;
+    font-size: 2rem;
+    color: #008beb;
+    font-weight: 500;
+    @include less_than_560() {
+      align-self: center;
+    }
+  }
+  .contact_section {
+    min-height: 620px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    column-gap: 2em;
+    flex-wrap: wrap;
+    row-gap: 2em;
+    .card_section {
+      width: 100%;
+      max-width: 330px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 2em;
+    }
+    .mail {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 450px;
+      row-gap: 3em;
+      // background-color: #1E1E1E;
+      label {
+        color: #6d6c6c;
+        outline: 2px solid #008beb;
+        border-radius: 5px;
+        width: 100%;
+        position: relative;
+        padding: 0.3em;
+        input {
+          background-color: transparent;
+          outline: none;
+          border: none;
+          font-weight: 100;
+          padding: 0.7em 1em;
+          font-size: 1.2rem;
+          text-align: left;
+          width: 100%;
+        }
+        textarea {
+          outline: none;
+          width: 100%;
+          min-height: 280px;
+          padding: 1em;
+          border: none;
+          resize: none;
+          background: transparent;
+          font-size: 1.2rem;
+        }
+        &::after {
+          content: "Name";
+          background-color: white;
+          position: absolute;
+          left: 5%;
+          top: -25%;
+          font-size: 1.3rem;
+        }
+        &.email {
+          &::after {
+            content: "Email";
+          }
+        }
+        &.textarea {
+          &::after {
+            content: "Project";
+            top: -8%;
+          }
+        }
+      }
+      button {
+        align-self: flex-start;
+        background-color: #008beb;
+        font-size: 1.4rem;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 0.5em 0.5em;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px #0089ebb2;
+        &.dark {
+          color: #0d0d0d;
+        }
+      }
+      &.dark {
+        label {
+          &::after {
+            background-color: #0d0d0d;
+          }
+        }
+      }
+    }
+  }
+}
