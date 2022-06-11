@@ -15,7 +15,7 @@ import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 export default function Port(prop) {
   const data = [
     {
-      name: "Calcualtor App",
+      name: "Calculator App",
       about:
         " I cloned the IOS calculator with simple Javascript, HTML and CSS. You can access the code on my github repository. Nonetheless you can click on me for the live demo. ",
       image: cal,
