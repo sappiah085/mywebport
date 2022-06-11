@@ -102,7 +102,7 @@ nav {
     li {
       font-size: 1.3rem;
       @include less_than_600(){
-        font-size: .8rem;
+        font-size: 1rem;
       }
       a {
         font-family: "Poppins", sans-serif;
