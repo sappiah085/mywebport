@@ -13,6 +13,11 @@
     @content;
   }
 }
+@mixin less_than_600px {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 
 .homepage {
   $homepage_bg: #f2f4f5e8;
@@ -58,6 +63,9 @@
       font-size: 2.5rem;
       font-weight: 700;
       color: $font_color;
+      @include less_than_600px(){
+        font-size: 1.8rem;
+      }
     }
     .name {
       font-family: "Clash Display", sans-serif;
@@ -70,11 +78,18 @@
         word-wrap: break-word;
         word-break: break-all;
       }
+      @include less_than_600px(){
+        font-size: 2.5rem;
+        min-height: 2.5em;
+      }
     }
     p {
       color: $font_color;
       font-size: 1.3rem;
       font-family: "Poppins", sans-serif;
+      @include less_than_600px(){
+        font-size: .9rem;
+      }
     }
     .buttons {
       font-family: "Poppins", sans-serif;
@@ -88,6 +103,9 @@
       a {
         text-decoration: none;
         font-size: 1.2rem;
+        @include less_than_600px(){
+          font-size: .9rem;
+        }
       }
 
       .downloadlink,

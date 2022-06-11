@@ -1,3 +1,8 @@
+@mixin less_than_600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 .footer {
   width: 100%;
   font-family: "Poppins", sans-serif;
@@ -7,7 +12,7 @@
   justify-content: center;
   align-items: center;
   row-gap: 1em;
-  padding: 2em 0;
+  padding: 1.5em 1em;
   &.dark{
     background-color: #181818;
     h6{
@@ -19,6 +24,9 @@
     text-transform: uppercase;
     color: #008BEB;
     font-weight: 800;
+    @include less_than_600(){
+      font-size: 1.7rem;
+    }
   }
   ul{
     list-style: none;
@@ -33,6 +41,9 @@
       font-size: 1.3rem;
       text-decoration: none;
       color: #475056;
+      @include less_than_600(){
+        font-size: .8rem;
+      }
     }
   }
   .social{
@@ -45,6 +56,9 @@
       background-color: transparent;
       .icon{
         border-radius: 50%;
+        @include less_than_600(){
+          font-size: 1rem;
+        }
         box-shadow: 2px 2px 30px #0089eb62;
       }
     }
@@ -53,5 +67,8 @@
     font-size: 1.2rem;
     font-weight: 300;
     color: #000000;
+    @include less_than_600(){
+      font-size: .8rem;
+    }
   }
 }

@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin less_than_600px {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 .test_card {
   width: 100%;
   font-family: "Poppins", sans-serif;
@@ -30,6 +35,7 @@
     }
     p {
       color: white;
+      
     }
   }
   .label {
@@ -60,5 +66,8 @@
     text-align: center;
     padding: 1em;
     color: #475056c4;
+    @include less_than_600px(){
+        font-size: .7rem;
+      }
   }
 }

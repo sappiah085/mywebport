@@ -1,3 +1,9 @@
+@mixin less_than_600px {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
 .skill {
   display: flex;
   font-family: "Poppins", sans-serif;
@@ -8,6 +14,9 @@
   padding: 5em 0;
   margin: 0em auto;
   row-gap: 1em;
+  @include less_than_600px() {
+    padding: 5em 1em;
+  }
   &.dark {
     .skillset {
       .frontend {
@@ -18,7 +27,7 @@
     }
 
     background-color: #0d0d0d;
-    .lang{
+    .lang {
       background-color: #1818181e;
     }
   }
@@ -27,6 +36,9 @@
     // font-weight: 600;
     text-transform: uppercase;
     color: #0697ff;
+    @include less_than_600px() {
+      font-size: 1.7rem;
+    }
   }
   .skillset {
     display: flex;
@@ -37,6 +49,9 @@
     justify-content: center;
     align-items: center;
     column-gap: 5em;
+    @include less_than_600px(){
+      row-gap: .5em;
+    }
     .frontend {
       // background-color: #0697ff;
       padding: 1em;
@@ -53,7 +68,7 @@
       }
     }
   }
-  .lang{
+  .lang {
     display: flex;
     flex-wrap: wrap;
     row-gap: 1em;
@@ -62,9 +77,16 @@
     width: 100%;
     justify-content: center;
     column-gap: 1em;
-    img{
+    @include less_than_600px(){
+      column-gap: 0;
+      row-gap: .3em;
+    }
+    img {
       width: 5em;
       object-fit: contain;
+      @include less_than_600px() {
+        transform: scale(.7);
+      }
     }
   }
 }

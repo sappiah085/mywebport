@@ -6,6 +6,11 @@ $navbar_bg: #f2f4f5e8;
     @content;
   }
 }
+@mixin less_than_600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 .progress {
   width: 0.15em;
   justify-self: flex-start;
@@ -96,6 +101,9 @@ nav {
     overflow: hidden;
     li {
       font-size: 1.3rem;
+      @include less_than_600(){
+        font-size: .8rem;
+      }
       a {
         font-family: "Poppins", sans-serif;
         text-decoration: none;

@@ -3,6 +3,11 @@
     @content;
   }
 }
+@mixin less_than_600px {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 .port_cart {
   display: flex;
   transition: transform 0.4s ease-in-out;
@@ -19,6 +24,12 @@
   row-gap: 1em;
   box-shadow: 13px 13px 56px #4750561e;
   background-color: #ffffff;
+  @include less_than_600px(){
+    row-gap: .3em;
+    p{
+      font-size: .8rem;
+    }
+  }
   @include greater_than_500() {
     max-width: 400px;
   }

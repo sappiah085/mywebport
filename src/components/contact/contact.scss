@@ -3,6 +3,12 @@
     @content;
   }
 }
+@mixin less_than_600 {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
 .contact {
   width: 100%;
   font-family: "Poppins", sans-serif;
@@ -30,12 +36,18 @@
     font-size: 3rem;
     font-weight: 700;
     color: #008beb;
+    @include less_than_600(){
+      font-size: 1.7rem;
+    }
   }
   h4 {
     align-self: flex-start;
     font-size: 2rem;
     color: #008beb;
     font-weight: 500;
+    @include less_than_600(){
+      font-size: 1rem;
+    }
     @include less_than_560() {
       align-self: center;
     }
@@ -49,12 +61,18 @@
     column-gap: 2em;
     flex-wrap: wrap;
     row-gap: 2em;
+    @include less_than_600(){
+      row-gap: 1.7em;
+    }
     .card_section {
       width: 100%;
       max-width: 330px;
       display: flex;
       flex-direction: column;
       row-gap: 2em;
+      @include less_than_600(){
+        row-gap: 1em;
+      }
     }
     .mail {
       width: 100%;
@@ -63,6 +81,9 @@
       align-items: center;
       max-width: 450px;
       row-gap: 3em;
+      @include less_than_600(){
+        row-gap: 1em;
+      }
       // background-color: #1E1E1E;
       label {
         color: #6d6c6c;
@@ -80,6 +101,9 @@
           font-size: 1.2rem;
           text-align: left;
           width: 100%;
+          @include less_than_600(){
+            font-size: .8rem;
+          }
         }
         textarea {
           outline: none;
@@ -90,6 +114,10 @@
           resize: none;
           background: transparent;
           font-size: 1.2rem;
+          @include less_than_600(){
+            font-size: .8rem;
+            min-height: 200px;
+          }
         }
         &::after {
           content: "Name";
@@ -98,6 +126,9 @@
           left: 5%;
           top: -25%;
           font-size: 1.3rem;
+          @include less_than_600(){
+            font-size: .8rem;
+          }
         }
         &.email {
           &::after {
@@ -108,6 +139,9 @@
           &::after {
             content: "Project";
             top: -8%;
+            @include less_than_600(){
+              top: -3%;
+            }
           }
         }
       }
@@ -122,6 +156,9 @@
         cursor: pointer;
         border-radius: 5px;
         box-shadow: 1px 1px 10px #0089ebb2;
+        @include less_than_600(){
+          font-size: .8rem;
+        }
         &.dark {
           color: #0d0d0d;
         }

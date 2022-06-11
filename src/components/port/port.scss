@@ -1,3 +1,8 @@
+@mixin less_than_600px {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
 .port {
   font-family: "Poppins", sans-serif;
   display: flex;
@@ -12,6 +17,9 @@
   h1 {
     font-size: 3rem;
     color: #008beb;
+    @include less_than_600px(){
+      font-size: 1.7rem;
+    }
   }
   .container {
     width: 100%;
@@ -30,7 +38,6 @@
   }
 
   .swiper-slide {
-    // background-color: aquamarine;
     display: flex;
     align-items: center;
     justify-content: center;

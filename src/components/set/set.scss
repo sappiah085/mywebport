@@ -1,3 +1,9 @@
+@mixin less_than_600px {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+
 .set {
   display: flex;
   row-gap: 0.2em;
@@ -11,6 +17,9 @@
       font-size: 1.2rem;
       font-weight: 500;
       text-transform: uppercase;
+      @include less_than_600px(){
+        font-size: .8rem;
+      }
     }
     h6 {
       font-weight: 500;
@@ -18,6 +27,9 @@
       font-size: 1.4rem;
       &.dark{
         color: #ffff;
+      }
+      @include less_than_600px(){
+        font-size: .8rem;
       }
     }
   }
@@ -29,6 +41,9 @@
     border-radius: 12px;
     width: 100%;
     overflow: hidden;
+    @include less_than_600px(){
+        height: .8rem;
+      }
     &.dark{
       background-color: #333333;
     }
