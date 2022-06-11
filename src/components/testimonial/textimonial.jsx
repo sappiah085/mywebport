@@ -19,6 +19,7 @@ export default function Testimonial(props) {
           spaceBetween={50}
           slidesPerView={1}
           pagination={{
+            clickable: true,
             dynamicBullets: true,
           }}
           tag="span"

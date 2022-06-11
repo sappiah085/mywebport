@@ -10,7 +10,7 @@
   padding: 5em 0;
   flex-direction: column;
   align-items: center;
-  @include less_than_600px(){
+  @include less_than_600px() {
     padding: 5em 1em;
   }
   &.dark {
@@ -20,7 +20,7 @@
     font-size: 3rem;
     font-weight: 700;
     color: #008beb;
-    @include less_than_600px(){
+    @include less_than_600px() {
       font-size: 1.7rem;
     }
   }

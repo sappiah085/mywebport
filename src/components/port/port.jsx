@@ -84,7 +84,9 @@ export default function Port(prop) {
             modifier: 1,
             slideShadows: true,
           }}
-          pagination={true}
+          pagination={{
+            clickable: true,
+          }}
           modules={[EffectCoverflow, Pagination, Autoplay]}
           className="myswiper"
         >
