@@ -8,6 +8,11 @@
     @content;
   }
 }
+@mixin less_than_380px {
+  @media (max-width: 685px) {
+    @content;
+  }
+}
 
 .homepage {
   $homepage_bg: #f2f4f5e8;
@@ -36,7 +41,7 @@
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
-      &.dark{
+      &.dark {
         background-image: url("../../images/Group.png");
       }
     }
@@ -50,15 +55,21 @@
     .hello {
       font-family: "Clash Display", sans-serif;
       line-height: 0.6em;
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       font-weight: 700;
       color: $font_color;
     }
     .name {
       font-family: "Clash Display", sans-serif;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 900;
       color: $name_color;
+      min-height: 3em;
+      max-width: 380px;
+      @include less_than_380px() {
+        word-wrap: break-word;
+        word-break: break-all;
+      }
     }
     p {
       color: $font_color;
@@ -146,11 +157,10 @@
       min-width: 690px;
       @include greater_than_1100px() {
         transform: translate(-50%, -214px) scale(1.8);
-        &.dark{
+        &.dark {
           transform: translate(-50%, -195px) scale(1.7);
         }
       }
     }
-    
   }
 }
