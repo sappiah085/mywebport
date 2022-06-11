@@ -4,7 +4,6 @@ import image from "../../images/man.jpeg";
 export default function About(prop) {
   return (
     <div
-      data-aos="fade-left"
       className={prop.dark ? "about dark" : "about"}
       tags="div"
       id="about"

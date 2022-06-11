@@ -49,7 +49,6 @@ export default function Skill(prop) {
   });
   return (
     <div
-      data-aos="fade-right"
       tags="div"
       className={prop.dark ? "skill dark" : "skill"}
       id="skills"

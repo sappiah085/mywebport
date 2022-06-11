@@ -3,17 +3,11 @@ import Navbar from "./components/Navbar/navbar";
 import Homepage from "./components/home/home.page";
 import About from "./components/About/about";
 import Port from "./components/port/port";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Footer from "./components/foot/foot";
 import Contact from "./components/contact/contact";
 import Skill from "./components/skills/skill";
 import Testimonial from "./components/testimonial/textimonial";
 function App() {
-  AOS.init({
-    duration: 1000,
-    delay: 50,
-  });
   const [darkMode, setDarkmode] = React.useState(
     JSON.parse(localStorage.getItem("darkmode"))
   );

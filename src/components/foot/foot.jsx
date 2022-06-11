@@ -4,7 +4,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { BiMailSend } from "react-icons/bi";
 export default function Footer(prop) {
   return (
-    <div data-aos="fade-down" className={prop.dark ? "footer dark" : "footer"}>
+    <div  className={prop.dark ? "footer dark" : "footer"}>
       <h3>Samuel</h3>
       <ul className="links">
         <li>
