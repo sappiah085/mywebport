@@ -70,12 +70,11 @@ export default function Port(prop) {
       <div className="container">
         <Swiper
           autoplay={{
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           effect={"coverflow"}
           grabCursor={true}
-          spaceBetween={-270}
           centeredSlides={true}
           slidesPerView={"auto"}
           coverflowEffect={{

@@ -13,7 +13,7 @@ export default function Testimonial(props) {
       <div className="card">
         <Swiper
           autoplay={{
-            delay: 2500,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           spaceBetween={50}
