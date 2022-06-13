@@ -18,7 +18,7 @@
   // justify-content: center;
   align-items: center;
   row-gap: 1.5em;
-  @include less_than_560() {
+  @media (max-width: 840px) {
     padding: 5em 1em;
   }
   &.dark {
@@ -45,18 +45,22 @@
     font-size: 2rem;
     color: #008beb;
     font-weight: 500;
+    // background-color: #0d0d0d;
+    // max-width: 780px;
+    padding: 0 4em;
     @include less_than_600(){
       font-size: 1rem;
     }
-    @include less_than_560() {
+    @media (max-width: 1322px) {
       align-self: center;
     }
   }
   .contact_section {
     min-height: 620px;
+    
     display: flex;
     width: 100%;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     column-gap: 2em;
     flex-wrap: wrap;
@@ -108,7 +112,7 @@
         textarea {
           outline: none;
           width: 100%;
-          min-height: 280px;
+          min-height: 220px;
           padding: 1em;
           border: none;
           resize: none;

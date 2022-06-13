@@ -10,6 +10,7 @@ export default function Testimonial(props) {
   return (
     <div tags="div" className={props.dark ? "test dark" : "test"} id="test">
       <h1>Testimonial</h1>
+      <div className="say">What are my previous clients saying? See for yourself below...</div>
       <div className="card">
         <Swiper
           autoplay={{

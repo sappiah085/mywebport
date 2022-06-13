@@ -8,7 +8,7 @@ import group from "../../images/Group.png";
 import samuel from "../../samuel.pdf";
 export default function Homepage(prop) {
   const { text } = useTypewriter({
-    words: ["SAMUEL.", "A WEB DEVELOPER.", "FAN TO BE WITH."],
+    words: ["SAMUEL APPIAH.", "A WEB DEVELOPER.", "ALWAYS READY TO HELP.", "ALWAYS READY FOR NEW IDEAS."],
     loop: 0,
     deleteSpeed: 80,
     typeSpeed: 100,
@@ -37,7 +37,7 @@ export default function Homepage(prop) {
             I have worked on so many projects with so many people around the
             world. I am always free and ready to work on new projects. I am very
             proficient in recent web technologies. I am currently studying new
-            skills. Below is the link to my resume. We can also get social with
+            skills in terms of backend technologies. Below is the link to my resume. We can also get social with
             the links provided below.
           </p>
           <div className="buttons">

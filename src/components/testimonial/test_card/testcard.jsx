@@ -12,11 +12,13 @@ export default function TestCard(props) {
         </div>
       </div>
       <p>
+        <span className="quote">"</span>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde et eum
         perferendis ratione consectetur, culpa illum beatae pariatur veritatis.
         Ut magnam consequatur id corporis molestias rerum, dolor accusantium hic
         repellendus facere eos cumque magni, consequuntur odio aperiam voluptate
         repudiandae laudantium ullam. Minima magnam tenetur quibusdam.
+        <span className="quote">"</span>
       </p>
     </div>
   );

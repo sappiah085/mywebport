@@ -48,12 +48,12 @@ export default function Skill(prop) {
     return <Set dark={prop.dark} key={key} {...el} />;
   });
   return (
-    <div
-      tags="div"
-      className={prop.dark ? "skill dark" : "skill"}
-      id="skills"
-    >
+    <div tags="div" className={prop.dark ? "skill dark" : "skill"} id="skills">
       <h1>Skills</h1>
+      <div className="say">
+        Below is my skill-set over a period of{" "}
+        {new Date().getFullYear() - new Date("12/9/2020").getFullYear()}+ years ...
+      </div>
       <div className="skillset">
         <div className="frontend">
           <h4>Frontend Development</h4>
